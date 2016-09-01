@@ -1,5 +1,7 @@
 import settings from './settings';
 const victorySound = new Audio('../sounds/pong-02.wav');
+
+
 export default class Paddle {
     constructor(boardWidth, boardHeight, x, control, score) {
         this.width = settings.paddleWidth;
@@ -29,13 +31,13 @@ export default class Paddle {
             }
         });
     }
-
+//Method to add the score
     addScore() {
         this.score.score++;
         victorySound.play();
     }
 
-
+//Render the paddles
     render(ctx, color) { // What is ctx? Where does it come from?
         ctx.fillStyle = color;
         ctx.fillRect(
