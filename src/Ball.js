@@ -10,7 +10,7 @@ export default class Ball {
         this.radius = settings.ballRadius;
         this.maxHeight = boardHeight;
     }
-
+//Draw the ball
     draw(ctx, color) {
         ctx.fillStyle = color;
         ctx.beginPath();
@@ -18,20 +18,21 @@ export default class Ball {
         ctx.fill();
         ctx.closePath();
     }
-
+//Method when ball passes left or right sides of canvas
     goal(width, height) {
         this.x = width / 2;
         this.y = height / 2;
         this.vx = Math.floor(Math.random() * 12 - 6);
         this.vy = -this.vy;
     }
-
+//Method when ball hits top and bottom of the canvas
     wallBounce(ctx, player1, player2) {
         if (this.y - this.radius < 0 || this.y + this.radius > this.maxHeight) {
             this.vy *= -1;
             wallSound.play();
         };
     }
+//Method when ball hits either paddles
     paddleCollision(player1, player2) {
         if (this.vx > 0) {
             const inRightEnd = player2.x <= this.x + this.radius &&
@@ -66,6 +67,7 @@ export default class Ball {
             }
         }
     }
+//Draws the ball and calls methods
     render(ctx, color, player1, player2, width, height) {
         this.draw(ctx, color);
         this.wallBounce(ctx, player1, player2);
