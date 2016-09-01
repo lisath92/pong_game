@@ -1,3 +1,4 @@
+//Game board where the game is played
 export default class Board {
     constructor(width, height) {
         this.width = width;

@@ -1,3 +1,4 @@
+//Default settings
 const settings = {
     gap: 10,
     p1Keys: {

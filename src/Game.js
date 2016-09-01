@@ -1,3 +1,4 @@
+//Playing the game
 import Board from './Board';
 import Paddle from './Paddle';
 import Ball from './Ball';
@@ -40,7 +41,7 @@ export default class Game {
         });
     }
 
-
+//Method to add more balls
     addBalls() {
         for (var i = 0; i < 5; i++) {
             let ball = new Ball(this.width, this.height);
@@ -50,6 +51,7 @@ export default class Game {
         }
     }
 
+//Method to change ball colors
     getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
@@ -58,7 +60,7 @@ export default class Game {
         }
         return color;
     }
-
+//Render the game itself and call methods
     render() {
         this.board.render(this.context);
         this.player1.render(this.context, 'yellow');
