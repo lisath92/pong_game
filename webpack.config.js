@@ -17,7 +17,7 @@ module.exports = {
 	},
 	output: {
 		path: PATHS.build,
-		publicPath: '/pong/',
+		publicPath: '/pong',
 		filename: 'bundle.js'
 	},
 	module: {
