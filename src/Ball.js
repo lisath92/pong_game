@@ -1,6 +1,6 @@
 import settings from './settings';
-const wallSound = new Audio('../sounds/pong-01.wav');
-const paddleSound = new Audio('../sounds/pong-03.wav');
+const wallSound = new Audio('http://www.freesound.org/data/previews/4/4391_4948-lq.mp3');
+const paddleSound = new Audio('http://www.freesound.org/data/previews/4/4390_4948-lq.mp3');
 export default class Ball {
     constructor(boardWidth, boardHeight) {
         this.x = boardWidth / 2;

@@ -1,5 +1,5 @@
 import settings from './settings';
-const victorySound = new Audio('../sounds/pong-02.wav');
+const victorySound = new Audio('http://www.freesound.org/data/previews/4/4388_4948-lq.mp3');
 
 
 export default class Paddle {
